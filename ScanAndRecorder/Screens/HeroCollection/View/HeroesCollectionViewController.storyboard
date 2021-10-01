@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BjD-hI-NS6">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item-->
+        <scene sceneID="xlc-Qx-bD3">
+            <objects>
+                <viewController storyboardIdentifier="HeroesCollectionViewController" id="BjD-hI-NS6" customClass="HeroesCollectionViewController" customModule="ScanAndRecorder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9TC-Iw-hBf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3n4-kc-nUR">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qc2-e3-gxS">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BjD-hI-NS6" id="8wd-Tk-KpF"/>
+                                    <outlet property="delegate" destination="BjD-hI-NS6" id="EMA-oq-89e"/>
+                                </connections>
+                            </collectionView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zac-aJ-NeG">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" red="0.9843203425" green="0.98430186509999995" blue="0.9843143821" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="18"/>
+                                    <color key="textColor" red="0.25549896329999999" green="0.67423595079999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </textAttributes>
+                                <textAttributes key="largeTitleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="16"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Heroes" id="vAZ-bV-K0T"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Jmd-hh-R81"/>
+                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Jmd-hh-R81" firstAttribute="trailing" secondItem="3n4-kc-nUR" secondAttribute="trailing" id="9g4-Xn-cM4"/>
+                            <constraint firstItem="3n4-kc-nUR" firstAttribute="top" secondItem="zac-aJ-NeG" secondAttribute="bottom" id="Ih4-K5-wx6"/>
+                            <constraint firstItem="3n4-kc-nUR" firstAttribute="leading" secondItem="Jmd-hh-R81" secondAttribute="leading" id="Lo3-Cf-jU2"/>
+                            <constraint firstItem="Jmd-hh-R81" firstAttribute="bottom" secondItem="3n4-kc-nUR" secondAttribute="bottom" id="fjh-Ht-Qdg"/>
+                            <constraint firstItem="zac-aJ-NeG" firstAttribute="top" secondItem="Jmd-hh-R81" secondAttribute="top" id="gyH-jf-C1Q"/>
+                            <constraint firstAttribute="trailing" secondItem="zac-aJ-NeG" secondAttribute="trailing" id="kBS-SG-veO"/>
+                            <constraint firstItem="zac-aJ-NeG" firstAttribute="leading" secondItem="9TC-Iw-hBf" secondAttribute="leading" id="xOh-6O-Z0C"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="bOZ-RO-5SZ">
+                        <color key="badgeColor" red="0.25549896329999999" green="0.67423595079999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <imageReference key="selectedImage" image="square.and.arrow.up" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="collectionView" destination="3n4-kc-nUR" id="jJW-2C-k95"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fv1-bK-Su1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="915.94202898550736" y="493.52678571428567"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+    </resources>
+</document>
